@@ -1,7 +1,9 @@
+import Pricing from "./pages/Pricing";
+
 function App() {
   return (
     <>
-      <div></div>
+      <Pricing />
     </>
   );
 }
