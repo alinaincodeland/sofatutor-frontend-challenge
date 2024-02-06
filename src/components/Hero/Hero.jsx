@@ -1,5 +1,6 @@
 import CardsList from "./CardsList";
 import PricingInfoCard from "./PricingInfoCard";
+import PricingPlan from "./PricingPlan";
 
 function Hero() {
   return (
@@ -8,6 +9,8 @@ function Hero() {
         <CardsList />
         <div className="xs:flex-col sm:flex justify-center items-center">
           <PricingInfoCard />
+          <PricingPlan planType="premium" />
+          <PricingPlan planType="basis" />
         </div>
       </div>
     </div>
