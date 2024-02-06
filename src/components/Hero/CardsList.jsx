@@ -31,9 +31,7 @@ const CardsList = () => {
             key={index}
             className="w-full lg:w-[16.5rem] bg-white px-4 pt-4 pb-3 rounded-lg text-center shadow-lg"
           >
-            <h4 className="mb-2">
-              <b>{card.title}</b>
-            </h4>
+            <h4 className="mb-2 font-bold">{card.title}</h4>
             <p className="text-small mb-4">{card.description}</p>
             <div className="py-2 flex items-center justify-center h-[6.25rem] mb-6">
               {card.image}
