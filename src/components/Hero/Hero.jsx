@@ -1,5 +1,11 @@
+import CardsList from "./CardsList";
+
 function Hero() {
-  return <div>Hero</div>;
+  return (
+    <div>
+      <CardsList />
+    </div>
+  );
 }
 
 export default Hero;
