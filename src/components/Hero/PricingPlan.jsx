@@ -1,13 +1,9 @@
 import PropTypes from "prop-types";
-import Chat from "../SVG/Chat";
-import Videos from "../SVG/Videos";
-import Tests from "../SVG/Tests";
-import VocabularyTrainer from "../SVG/VocabularTrainer";
-import Sofaheld from "../SVG/Sofaheld";
-import Worksheets from "../SVG/Worksheets";
+import BenefitItem from "./BenefitItem";
+import { getBenefits } from "./BenefitUtils";
 import RightArrow from "../SVG/RightArrow";
-import Homework from "../SVG/Homework";
 
+// Premium plan properties
 const premiumProperties = {
   planCard: "sm:w-[285px] z-10 rounded-lg pt-6",
   planTitle: <h2 className="font-bold text-center">Premium</h2>,
@@ -32,6 +28,7 @@ const premiumProperties = {
   benefits: getBenefits(false, "text-small"),
 };
 
+// Basis plan properties
 const basisProperties = {
   planCard: "sm:w-[248px] z-0 pt-4 rounded-tr-lg rounded-bl-lg rounded-br-lg",
   planTitle: <h3 className="font-bold text-center">Basis</h3>,
@@ -56,66 +53,7 @@ const basisProperties = {
   benefits: getBenefits(true, "text-xs"),
 };
 
-function getBenefits(isGrey, additionalClass) {
-  return [
-    {
-      icon: Videos,
-      text: ["Lernvideos für alle", "Fächer & Klassen"],
-      additionalClass: additionalClass,
-    },
-    {
-      icon: Tests,
-      text: ["Interaktive Übungen"],
-      additionalClass: additionalClass,
-    },
-    {
-      icon: Homework,
-      text: ["Klassenarbeiten zum Üben"],
-      additionalClass: additionalClass,
-    },
-    {
-      icon: Sofaheld,
-      text: ["Lernspiel Sofaheld", "(für die 1. bis 7. Klasse)"],
-      additionalClass: additionalClass,
-    },
-    {
-      icon: VocabularyTrainer,
-      text: ["Vokabeltrainer"],
-      additionalClass: additionalClass,
-    },
-    {
-      icon: Worksheets,
-      text: ["Arbeitsblätter"],
-      isGrey: isGrey,
-      additionalClass: additionalClass,
-    },
-    {
-      icon: Chat,
-      text: ["24h-Hilfe von Lehrer*innen"],
-      isGrey: isGrey,
-      additionalClass: additionalClass,
-    },
-  ];
-}
-function BenefitItem({ icon: Icon, text, isGrey, additionalClass }) {
-  return (
-    <li className="flex items-center space-x-3 border-b border-gray-medium py-2 pl-8">
-      <Icon isGrey={isGrey} />
-      <p className={`"leading-[19px]" ${additionalClass}`}>
-        {text[0]} <br /> {text[1]}
-      </p>
-    </li>
-  );
-}
-
-BenefitItem.propTypes = {
-  icon: PropTypes.elementType.isRequired,
-  text: PropTypes.arrayOf(PropTypes.string).isRequired,
-  isGrey: PropTypes.bool,
-  planType: PropTypes.string,
-  additionalClass: PropTypes.string,
-};
-
+// PricingPlan component that renders the pricing plan card
 function PricingPlan({ planType }) {
   const properties =
     planType === "premium" ? premiumProperties : basisProperties;
