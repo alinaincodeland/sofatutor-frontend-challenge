@@ -4,11 +4,11 @@ import Hero from "../components/Hero/Hero";
 
 function Pricing() {
   return (
-    <div>
+    <>
       <Header />
       <Banner />
       <Hero />
-    </div>
+    </>
   );
 }
 
