@@ -19,6 +19,7 @@ const Banner = () => {
   return (
     // Banner container with dynamic background colour based on the banner version
     <div
+      data-testid="banner"
       className={`${bannerBackgroundColour} border-solid border-b-2 relative`}
     >
       <div className="py-2 px-4 flex justify-between items-center max-w-[74rem] mx-auto">
@@ -27,7 +28,7 @@ const Banner = () => {
 
           {/* Banner text with dynamic content based on the banner version  */}
           <div>
-            <h5>
+            <h5 data-testid="banner-text">
               <span className="font-bold">20 % Rabatt </span> –
               {showAlternateBanner
                 ? " Jetzt ganz einfach den Schulstoff nachholen und 20% sparen!"
