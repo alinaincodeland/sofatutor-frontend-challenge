@@ -7,7 +7,12 @@ const Banner = () => {
 
   // Check and set the initial banner version based on the cookie value
   useEffect(() => {
-    const cookieValue = Cookies.get("bannerVersion");
+    let cookieValue = Cookies.get("bannerVersion");
+    if (!cookieValue) {
+      // Set initial cookie value to 0
+      cookieValue = "0";
+      Cookies.set("bannerVersion", "0");
+    }
     setShowAlternateBanner(cookieValue === "1");
   }, []);
 
