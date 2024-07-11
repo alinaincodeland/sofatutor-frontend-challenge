@@ -84,6 +84,3 @@ Naturally, the project was crafted with a lot of google search. While I'm quite 
 
 ![Large](./src/assets/large-size.png)
 
-```
-
-```
