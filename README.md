@@ -22,8 +22,6 @@ npm run dev
 
 Hey there, I'm Alina. I like to think of myself as a creative developer, and I've been dreaming of joining the sofatutor team for over a year now (seriously, ask Francisco _wink wink_). And yes, you guessed it—I'm also a big fan of Friends and gifs!
 
-![Phoebs](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3R4M3A4MG9sNTFjM3ZueWYwZHZmbzlnejdiNnR2b3prcHNwbWw1ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QBGfW8HqzXzYDojCqo/giphy.gif)
-
 ## How did I approach this task?
 
 1. Reviewing the design specifications
@@ -51,10 +49,6 @@ I organized the project by structuring it around the key components I implemente
 At this point, I wanted to make sure I could easily access all the relevant CSS variables and styles from the project's design system. So, I simply added the color variables to the tailwind.config.js file and typography settings to the index.css file.
 
 Next, I began developing each component using Tailwind CSS classes for styling. I ensured that each component was developed on its own branch, which was later merged into the main branch.
-
-This part looked something like that...
-
-![Parkour](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHpoOWgwa2h4YzdhZGF4YXp3Z3V2cHpqODl1b2k2NTdvaTcyN3h1eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f0sATHPZHuHAq2Wj34/giphy-downsized-large.gif)
 
 6. Implementing the cookie logic
 
